@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\components",
+    "\\src\\app\\components\\add-product",
+    "\\src\\app\\components\\cart",
+    "\\src\\app\\components\\dashboard",
+    "\\src\\app\\components\\home",
+    "\\src\\app\\guards",
+    "\\src\\app\\services"
+  ],
+  "SelectedNode": "\\package.json",
+  "PreviewInSolutionExplorer": false
+}

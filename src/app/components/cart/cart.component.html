@@ -1,0 +1,7 @@
+<!-- src/app/components/cart/cart.component.html -->
+<h1>Cart</h1>
+<div *ngFor="let item of cartItems">
+  <h3>{{ item.title }}</h3>
+  <p>{{ item.price | currency }}</p>
+  <button (click)="removeFromCart(item)">Remove from Cart</button>
+</div>
