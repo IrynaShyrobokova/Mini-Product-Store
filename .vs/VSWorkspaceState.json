@@ -11,6 +11,6 @@
     "\\src\\app\\guards",
     "\\src\\app\\services"
   ],
-  "SelectedNode": "\\package.json",
+  "SelectedNode": "\\src\\app\\components\\add-product\\add-product.component.ts",
   "PreviewInSolutionExplorer": false
 }

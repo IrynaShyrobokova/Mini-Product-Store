@@ -1,29 +1,16 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router'; 
-
+import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
-import { HomeComponent } from './components/home/home.component';
-import { AddProductComponent } from './components/add-product/add-product.component';
-import { CartComponent } from './components/cart/cart.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { appRoutes } from './app.routes';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    AddProductComponent,
-    CartComponent,
-    DashboardComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
-    HttpClientModule,
-    AppRoutingModule,
-    RouterModule // Ensure RouterModule is here
+    RouterModule.forRoot(appRoutes)
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

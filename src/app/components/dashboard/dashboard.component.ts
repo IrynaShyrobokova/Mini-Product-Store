@@ -1,19 +1,21 @@
-import { Component, OnInit } from '@angular/core';
-import { FakeStoreService } from '../../services/fake-store.service';
+import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  template: `
+    <h2>Dashboard</h2>
+    <p>Only visible to logged-in users</p>
+    <div *ngFor="let user of users">
+      <p>{{ user.name }}</p>
+    </div>
+  `
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent {
   users: any[] = [];
 
-  constructor(private fakeStoreService: FakeStoreService) { }
-
-  ngOnInit(): void {
-    this.fakeStoreService.getAllUsers().subscribe((data) => {
-      this.users = data;
-    });
+  constructor(private http: HttpClient) {
+    this.http.get('https://fakestoreapi.com/users')
+      .subscribe(data => this.users = data as any[]);
   }
 }

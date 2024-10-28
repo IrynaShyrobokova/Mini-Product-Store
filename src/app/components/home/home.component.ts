@@ -1,26 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import { FakeStoreService } from '../../services/fake-store.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  template: `
+    <h2>Products</h2>
+    <div *ngFor="let product of products">
+      <p>{{ product.title }}</p>
+      <p>{{ product.price }}</p>
+    </div>
+  `
 })
 export class HomeComponent implements OnInit {
   products: any[] = [];
-  users: any[] = [];
 
-  constructor(private fakeStoreService: FakeStoreService) { }
+  constructor(private http: HttpClient) { }
 
-  ngOnInit(): void {
-    // Fetch products
-    this.fakeStoreService.getAllProducts().subscribe((data) => {
-      this.products = data;
-    });
-
-    // Fetch users
-    this.fakeStoreService.getAllUsers().subscribe((data) => {
-      this.users = data;
-    });
+  ngOnInit() {
+    this.http.get('https://fakestoreapi.com/products')
+      .subscribe(data => this.products = data as any[]);
   }
 }
