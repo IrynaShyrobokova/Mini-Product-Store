@@ -3,14 +3,8 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\components",
-    "\\src\\app\\components\\add-product",
-    "\\src\\app\\components\\cart",
-    "\\src\\app\\components\\dashboard",
-    "\\src\\app\\components\\home",
-    "\\src\\app\\guards",
-    "\\src\\app\\services"
+    "\\src\\app\\components"
   ],
-  "SelectedNode": "\\src\\app\\components\\add-product\\add-product.component.ts",
+  "SelectedNode": "\\src\\app\\app.component.html",
   "PreviewInSolutionExplorer": false
 }

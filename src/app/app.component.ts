@@ -1,18 +1,28 @@
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+// src/app/app.component.ts
+
+import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { UserService } from './services/user.service';
 
 @Component({
   selector: 'app-root',
-  standalone: true, // Mark as standalone
-  imports: [RouterModule], // Import RouterModule for routing
-  template: `
-    <nav>
-      <a routerLink="/">Home</a>
-      <a routerLink="/add-product">Add Product</a>
-      <a routerLink="/cart">Cart</a>
-      <a routerLink="/dashboard">Dashboard</a>
-    </nav>
-    <router-outlet></router-outlet>
-  `
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent { }
+export class AppComponent implements OnInit {
+  isLoggedIn!: Observable<string | undefined>;
+
+  constructor(private userService: UserService) { }
+
+  ngOnInit(): void {
+    this.isLoggedIn = this.userService.isLoggedIn();
+  }
+
+  onLogin(): void {
+    this.userService.login('ADMIN_USER');
+  }
+
+  onLogout(): void {
+    this.userService.logout();
+  }
+}

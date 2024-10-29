@@ -1,15 +1,11 @@
+// home.component.ts
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
-  template: `
-    <h2>Products</h2>
-    <div *ngFor="let product of products">
-      <p>{{ product.title }}</p>
-      <p>{{ product.price }}</p>
-    </div>
-  `
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
   products: any[] = [];
@@ -17,7 +13,8 @@ export class HomeComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    this.http.get('https://fakestoreapi.com/products')
-      .subscribe(data => this.products = data as any[]);
+    this.http.get('https://fakestoreapi.com/products').subscribe((data: any) => {
+      this.products = data;
+    });
   }
 }

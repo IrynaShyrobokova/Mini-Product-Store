@@ -1,6 +1,9 @@
-import { HttpClient } from '@angular/common/http';
+// src/app/services/user.service.ts
+
 import { Injectable } from '@angular/core';
-import { map, of, Subject } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { Observable, Subject } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -10,19 +13,19 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  isLoggedIn() {
+  isLoggedIn(): Observable<string | undefined> {
     return this.user.asObservable();
   }
 
-  login(userName: string) {
+  login(userName: string): void {
     this.user.next(userName);
   }
 
-  logout() {
+  logout(): void {
     this.user.next(undefined);
   }
 
-  getAllUsersFromMDB() {
+  getAllUsersFromMDB(): Observable<any> {
     return this.http.get('https://reqres.in/api/users')
       .pipe(map((res: any) => res.data));
   }
