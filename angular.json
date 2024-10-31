@@ -11,11 +11,11 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:application",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/mini-product-store",
             "index": "src/index.html",
-            "browser": "src/main.ts",
+            "main": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -23,8 +23,11 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
-              }
+                "input": "public",
+                "output": "/assets"
+              },
+              "src/favicon.ico",
+              "src/assets"
             ],
             "styles": [
               "src/styles.css",
@@ -58,12 +61,15 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "mini-product-store:build"
+          },
           "configurations": {
             "production": {
-              "buildTarget": "mini-product-store:build:production"
+              "browserTarget": "mini-product-store:build:production"
             },
             "development": {
-              "buildTarget": "mini-product-store:build:development"
+              "browserTarget": "mini-product-store:build:development"
             }
           },
           "defaultConfiguration": "development"

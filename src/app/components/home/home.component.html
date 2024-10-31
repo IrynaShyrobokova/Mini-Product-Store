@@ -1,13 +1,19 @@
-<h2>Products</h2>
-<ul>
-  <li *ngFor="let product of products">
-    {{ product.title }} - ${{ product.price }}
-  </li>
-</ul>
-
-<h2>Users</h2>
-<ul>
-  <li *ngFor="let user of users">
-    {{ user.name.firstname }} {{ user.name.lastname }}
-  </li>
-</ul>
+<div class="container mt-4" *ngIf="!isLoading; else loading">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let product of products">
+      <div class="card mb-4">
+        <img [src]="product.image" class="card-img-top" alt="{{ product.title }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.title }}</h5>
+          <p class="card-text">{{ product.price }}</p>
+          <button class="btn btn-primary" (click)="addToCart(product)">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #loading>
+  <div class="text-center">
+    <div class="spinner-border" role="status"></div>
+  </div>
+</ng-template>

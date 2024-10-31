@@ -1,21 +1,24 @@
-import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-dashboard',
-  template: `
-    <h2>Dashboard</h2>
-    <p>Only visible to logged-in users</p>
-    <div *ngFor="let user of users">
-      <p>{{ user.name }}</p>
-    </div>
-  `
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent {
+export class DashboardComponent implements OnInit {
   users: any[] = [];
+  isLoading = true;
 
-  constructor(private http: HttpClient) {
-    this.http.get('https://fakestoreapi.com/users')
-      .subscribe(data => this.users = data as any[]);
+  constructor(private userService: UserService) { }
+
+  ngOnInit() {
+    this.userService.getAllUsers().subscribe({
+      next: (data) => {
+        this.users = data;
+        this.isLoading = false;
+      },
+      error: (error) => console.error(error),
+    });
   }
 }

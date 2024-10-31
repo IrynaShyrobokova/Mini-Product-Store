@@ -1,5 +1,26 @@
-<h2>User Dashboard</h2>
-<div *ngFor="let user of users">
-  <p>{{ user.name.firstname }} {{ user.name.lastname }}</p>
-  <p>Email: {{ user.email }}</p>
+<div class="container mt-4" *ngIf="!isLoading; else loading">
+  <h2>Dashboard</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Username</th>
+        <th>Phone</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.name.firstname }} {{ user.name.lastname }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.phone }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
+<ng-template #loading>
+  <div class="text-center">
+    <div class="spinner-border" role="status"></div>
+  </div>
+</ng-template>

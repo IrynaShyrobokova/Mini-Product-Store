@@ -1,6 +1,6 @@
-// home.component.ts
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { ProductService } from '../../services/product.service';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-home',
@@ -9,12 +9,22 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HomeComponent implements OnInit {
   products: any[] = [];
+  isLoading = true;
 
-  constructor(private http: HttpClient) { }
+  constructor(private productService: ProductService, private cartService: CartService) { }
 
   ngOnInit() {
-    this.http.get('https://fakestoreapi.com/products').subscribe((data: any) => {
-      this.products = data;
+    this.productService.getAllProducts().subscribe({
+      next: (data: any[]) => {  // Explicit type for 'data' as an array
+        this.products = data;
+        this.isLoading = false;
+      },
+      error: (error: any) => console.error(error),  // Explicit type for 'error'
     });
+  }
+
+
+  addToCart(product: any) {
+    this.cartService.addToCart(product);
   }
 }

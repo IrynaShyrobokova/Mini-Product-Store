@@ -3,8 +3,14 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\components"
+    "\\src\\app\\components",
+    "\\src\\app\\components\\add-product",
+    "\\src\\app\\components\\dashboard",
+    "\\src\\app\\components\\home",
+    "\\src\\app\\components\\login",
+    "\\src\\app\\components\\navbar",
+    "\\src\\app\\guards"
   ],
-  "SelectedNode": "\\src\\app\\app.component.html",
+  "SelectedNode": "\\tsconfig.spec.json",
   "PreviewInSolutionExplorer": false
 }
