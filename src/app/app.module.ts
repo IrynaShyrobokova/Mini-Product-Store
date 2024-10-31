@@ -23,7 +23,7 @@ import { CartComponent } from './components/cart/cart.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule, // Ensure this is added here
+    FormsModule, // Add FormsModule here
     HttpClientModule
   ],
   providers: [],

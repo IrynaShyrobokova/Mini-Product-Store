@@ -9,13 +9,12 @@ import { Router } from '@angular/router';
 })
 export class AddProductComponent {
   product = {
-    title: '' as string,         
-    price: null as number | null, 
-    description: '' as string,
-    image: '' as string,
-    category: '' as string,
+    title: '',       // String type for title
+    price: 0,        // Number type for price
+    description: '', // String type for description
+    image: '',       // String type for image
+    category: ''     // String type for category
   };
-
   constructor(private productService: ProductService, private router: Router) { }
 
   addProduct() {

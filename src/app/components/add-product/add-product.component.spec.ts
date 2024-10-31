@@ -1,9 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AddProductComponent } from './add-product.component';
 import { ProductService } from '../../services/product.service';
-import { Router } from '@angular/router';
 import { of } from 'rxjs';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 describe('AddProductComponent', () => {
   let component: AddProductComponent;
@@ -18,7 +18,7 @@ describe('AddProductComponent', () => {
 
     await TestBed.configureTestingModule({
       declarations: [AddProductComponent],
-      imports: [FormsModule],  // Import FormsModule for ngModel bindings
+      imports: [FormsModule],  
       providers: [
         { provide: ProductService, useValue: mockProductService },
         { provide: Router, useValue: mockRouter }
