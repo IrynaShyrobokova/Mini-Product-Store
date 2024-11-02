@@ -30,22 +30,22 @@ export class LoginComponent implements OnInit {
   // Method called on form submission
   onLogin() {
     if (this.loginForm.invalid) {
-      // Display validation errors
       this.loginForm.markAllAsTouched();
       return;
     }
 
     const { username, password } = this.loginForm.value;
 
-    // Call the AuthService's login method
     this.authService.login(username, password).subscribe({
-      next: () => {
-        // Navigate to home page on successful login
-        this.router.navigate(['/home']);
+      next: (isSuccess) => {
+        if (isSuccess) {
+          this.router.navigate(['/home']);
+        } else {
+          this.loginError = 'Login failed. Please try again.';
+        }
       },
       error: (err) => {
-        // Handle login error and log it to console
-        this.loginError = 'Login failed. Please try again.';
+        this.loginError = 'An error occurred. Please try again later.';
         console.error('Login failed', err);
       }
     });

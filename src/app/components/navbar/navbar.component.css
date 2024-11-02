@@ -48,6 +48,11 @@
   font-weight: bold;
 }
 
+.navbar .ml-auto {
+  margin-left: auto;
+}
+
+
 /* Responsive styling */
 @media (max-width: 768px) {
   .navbar {

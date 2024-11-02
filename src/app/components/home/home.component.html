@@ -1,2 +1,13 @@
-<!-- home.component.html -->
-<p>Welcome to the Home Page!</p>
+<div class="welcome-message">
+  <h2>Welcome, {{ username ? username : 'Guest' }}!</h2>
+</div>
+
+<div class="products-container" *ngIf="!isLoading">
+  <div *ngFor="let product of products" class="product-card">
+    <h3 class="product-title">{{ product.name }}</h3>
+    <p class="product-description">{{ product.description }}</p>
+    <button class="add-to-cart" (click)="addToCart(product)">Add to Cart</button>
+  </div>
+</div>
+
+<div *ngIf="isLoading" class="loading">Loading products...</div>

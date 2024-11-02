@@ -68,7 +68,9 @@ describe('LoginComponent', () => {
 
   it('should call AuthService login method on form submission', () => {
     component.loginForm.setValue({ username: 'testuser', password: 'password123' });
-    authServiceSpy.login.and.returnValue(of({}));
+
+    // Use `of(true)` to simulate a successful login response
+    authServiceSpy.login.and.returnValue(of(true));
 
     component.onLogin();
 
@@ -77,7 +79,7 @@ describe('LoginComponent', () => {
 
   it('should navigate to the home page on successful login', () => {
     component.loginForm.setValue({ username: 'testuser', password: 'password123' });
-    authServiceSpy.login.and.returnValue(of({}));
+    authServiceSpy.login.and.returnValue(of(true));
 
     component.onLogin();
 

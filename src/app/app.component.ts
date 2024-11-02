@@ -6,9 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  showLoginForm = false;  
+  showLoginForm = false;
 
   toggleLoginForm() {
     this.showLoginForm = !this.showLoginForm;
   }
 }
+

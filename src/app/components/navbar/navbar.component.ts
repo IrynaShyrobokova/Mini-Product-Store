@@ -9,6 +9,6 @@ export class NavbarComponent {
   @Output() loginClick = new EventEmitter<void>();
 
   onLoginClick() {
-    this.loginClick.emit();  
+    this.loginClick.emit();
   }
 }

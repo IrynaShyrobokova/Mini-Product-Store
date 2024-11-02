@@ -11,8 +11,8 @@ describe('HomeComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [HomeComponent],
       imports: [
-        RouterTestingModule,     // Mock routing module for routing-related dependencies
-        HttpClientTestingModule  // Mock HTTP module for HTTP-related dependencies
+        RouterTestingModule,     
+        HttpClientTestingModule  
       ]
     })
       .compileComponents();
@@ -21,7 +21,7 @@ describe('HomeComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(HomeComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();  // Apply initial data bindings
+    fixture.detectChanges();  
   });
 
   it('should create the component', () => {
