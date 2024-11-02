@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
@@ -9,34 +9,50 @@ import { AuthService } from '../../services/auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  loginForm!: FormGroup;
+  @Output() close = new EventEmitter<void>(); // Output event to close the form
+  loginForm: FormGroup;
+  loginError: string | null = null;
 
-  constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) { }
-
-  ngOnInit(): void {
+  constructor(
+    private fb: FormBuilder,
+    private authService: AuthService,
+    private router: Router
+  ) {
+    // Initialize the form with empty fields and validators
     this.loginForm = this.fb.group({
       username: ['', Validators.required],
       password: ['', [Validators.required, Validators.minLength(6)]]
     });
   }
 
-  onLogin(): void {
-    if (this.loginForm.valid) {
-      const { username, password } = this.loginForm.value;
-      this.authService.login(username, password).subscribe({
-        next: (response: any) => {
-          console.log('Login successful:', response);
-          // Handle successful login, e.g., navigate to a dashboard
-        },
-        error: (err: any) => {
-          console.error('Login error:', err);
-          // Handle login error, e.g., show an error message
-        }
-      });
+  ngOnInit(): void { }
+
+  // Method called on form submission
+  onLogin() {
+    if (this.loginForm.invalid) {
+      // Display validation errors
+      this.loginForm.markAllAsTouched();
+      return;
     }
+
+    const { username, password } = this.loginForm.value;
+
+    // Call the AuthService's login method
+    this.authService.login(username, password).subscribe({
+      next: () => {
+        // Navigate to home page on successful login
+        this.router.navigate(['/home']);
+      },
+      error: (err) => {
+        // Handle login error and log it to console
+        this.loginError = 'Login failed. Please try again.';
+        console.error('Login failed', err);
+      }
+    });
   }
 
-  closeLogin() {
-    this.router.navigate(['/']); 
+  // Method to close the login form
+  onClose() {
+    this.close.emit();
   }
 }

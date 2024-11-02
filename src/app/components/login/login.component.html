@@ -1,42 +1,36 @@
-<div class="container mt-5">
-  <div class="row justify-content-center">
-    <div class="col-md-6">
-      <div class="card">
-        <div class="card-header text-center bg-primary text-white">
-          <h4>Login to Your Account</h4>
-        </div>
-        <div class="card-body">
-          <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
-            <div class="mb-3">
-              <label for="username" class="form-label">Username</label>
-              <input type="text"
-                     id="username"
-                     formControlName="username"
-                     class="form-control"
-                     [ngClass]="{ 'is-invalid': loginForm.get('username')?.invalid && loginForm.get('username')?.touched }" />
-              <div *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched" class="invalid-feedback">
-                Username is required.
-              </div>
-            </div>
-            <div class="mb-3">
-              <label for="password" class="form-label">Password</label>
-              <input type="password"
-                     id="password"
-                     formControlName="password"
-                     class="form-control"
-                     [ngClass]="{ 'is-invalid': loginForm.get('password')?.invalid && loginForm.get('password')?.touched }" />
-              <div *ngIf="loginForm.get('password')?.errors?.['required'] && loginForm.get('password')?.touched" class="invalid-feedback">
-                Password is required.
-              </div>
-              <div *ngIf="loginForm.get('password')?.errors?.['minlength'] && loginForm.get('password')?.touched" class="invalid-feedback">
-                Password must be at least 6 characters.
-              </div>
-            </div>
-            <button type="submit" class="btn btn-primary w-100" [disabled]="loginForm.invalid">Login</button>
-            <button class="close-button" (click)="closeLogin()">Cancel</button>
-          </form>
-        </div>
+<div class="login-container">
+  <!-- Close button at the top right -->
+  <button class="close-button" (click)="onClose()">✖</button>
+
+  <!-- Heading for login form -->
+  <h2>Login to Your Account</h2>
+
+  <!-- Login form with reactive forms binding -->
+  <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+
+    <!-- Username field with validation -->
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input id="username" formControlName="username" type="text" class="form-control" />
+      <div *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched" class="invalid-feedback">
+        Username is required.
       </div>
     </div>
-  </div>
+
+    <!-- Password field with validation -->
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input id="password" formControlName="password" type="password" class="form-control" />
+      <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="invalid-feedback">
+        <span *ngIf="loginForm.get('password')?.errors?.['required']">Password is required.</span>
+        <span *ngIf="loginForm.get('password')?.errors?.['minlength']">Password must be at least 6 characters.</span>
+      </div>
+    </div>
+
+    <!-- Submit button for login -->
+    <button type="submit" class="login-button" [disabled]="loginForm.invalid">Login</button>
+
+    <!-- Error message for login failure -->
+    <div *ngIf="loginError" class="error-message">{{ loginError }}</div>
+  </form>
 </div>

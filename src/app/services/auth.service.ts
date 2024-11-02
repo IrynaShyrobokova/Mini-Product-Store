@@ -13,10 +13,7 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   login(username: string, password: string): Observable<any> {
-    const payload = { username, password };
-    return this.http.post<any>(this.apiUrl, payload).pipe(
-      tap(() => this.loggedIn = true) // Set loggedIn to true on successful login
-    );
+    return this.http.post(this.apiUrl, { username, password });
   }
 
   isLoggedIn(): boolean {
@@ -25,6 +22,5 @@ export class AuthService {
 
   logout(): void {
     this.loggedIn = false;
-    // You can also clear tokens or session data here if needed
-  }
+   }
 }

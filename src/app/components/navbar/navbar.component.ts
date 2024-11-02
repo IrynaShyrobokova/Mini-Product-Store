@@ -1,6 +1,4 @@
-import { Component } from '@angular/core';
-import { AuthService } from '../../services/auth.service';
-import { Router } from '@angular/router';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -8,10 +6,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  constructor(public authService: AuthService, private router: Router) { }
+  @Output() loginClick = new EventEmitter<void>();
 
-  logout(): void {
-    this.authService.logout();
-    this.router.navigate(['/login']);
+  onLoginClick() {
+    this.loginClick.emit();  
   }
 }
