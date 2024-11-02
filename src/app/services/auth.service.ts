@@ -38,6 +38,10 @@ export class AuthService {
     return this.loggedIn;
   }
 
+  setCurrentUser(username: string) {
+    this.currentUser = username;
+  }
+
   getCurrentUser(): string | null {
     return this.currentUser;
   }

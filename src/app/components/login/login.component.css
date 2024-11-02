@@ -8,8 +8,8 @@
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1000;
-  width: 300px; 
-  max-width: 90%; 
+  width: 300px;
+  max-width: 90%;
 }
 
 .overlay {
@@ -43,6 +43,7 @@
 h2 {
   color: #333;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 /* Form group styling */
@@ -51,16 +52,37 @@ h2 {
   text-align: left;
 }
 
-/* Input field styling */
-input[type="text"],
-input[type="password"] {
-  width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 14px;
+/* Password input and show/hide button container */
+.password-container {
+  display: flex;
+  align-items: center;
+  position: relative;
 }
+
+  .password-container input[type="password"],
+  .password-container input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+
+  .password-container button {
+    margin-left: 8px;
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 0;
+    transition: color 0.2s ease;
+  }
+
+    .password-container button:hover {
+      color: #0056b3;
+    }
 
 /* Submit button styling */
 .login-button {
@@ -97,4 +119,5 @@ input[type="password"] {
   color: #dc3545;
   margin-top: 15px;
   font-size: 14px;
+  text-align: center;
 }

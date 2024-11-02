@@ -6,7 +6,12 @@
       <li class="nav-item"><a class="nav-link" routerLink="/cart">Cart</a></li>
     </ul>
     <div class="ml-auto">
-      <button (click)="onLoginClick()" class="btn btn-outline-light">Login</button>
+      <button *ngIf="!currentUser" (click)="openLogin()">Login</button>
+      <button *ngIf="currentUser">{{ currentUser }}</button>
     </div>
   </div>
 </nav>
+
+<div *ngIf="isLoginModalOpen" class="modal-overlay">
+  <app-login (close)="closeLogin()"></app-login>
+</div>

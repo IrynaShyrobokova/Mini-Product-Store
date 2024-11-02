@@ -12,6 +12,7 @@ export class LoginComponent implements OnInit {
   @Output() close = new EventEmitter<void>(); // Output event to close the form
   loginForm: FormGroup;
   loginError: string | null = null;
+  showPassword: boolean = false;
 
   constructor(
     private fb: FormBuilder,
@@ -27,6 +28,11 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void { }
 
+  // Toggle visibility of password field
+  togglePasswordVisibility() {
+    this.showPassword = !this.showPassword;
+  }
+
   // Method called on form submission
   onLogin() {
     if (this.loginForm.invalid) {
@@ -39,7 +45,10 @@ export class LoginComponent implements OnInit {
     this.authService.login(username, password).subscribe({
       next: (isSuccess) => {
         if (isSuccess) {
+          // Set current user for display in navbar
+          this.authService.setCurrentUser(username);
           this.router.navigate(['/home']);
+          this.close.emit(); // Close the login form after successful login
         } else {
           this.loginError = 'Login failed. Please try again.';
         }
