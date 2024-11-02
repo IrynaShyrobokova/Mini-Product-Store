@@ -3,88 +3,56 @@
   "WorkspaceRootPath": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\login\\login.component.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\login\\login.component.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\login\\login.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\login\\login.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\services\\auth.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\services\\auth.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\login\\login.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\login\\login.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\login\\login.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\login\\login.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\app.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\app.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\app.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\app.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\navbar\\navbar.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\navbar\\navbar.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\navbar\\navbar.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\navbar\\navbar.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\navbar\\navbar.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\navbar\\navbar.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\home\\home.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\home\\home.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\home\\home.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\home\\home.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\home\\home.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\home\\home.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\services\\product.service.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\services\\product.service.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\services\\product.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\services\\product.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\app.component.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\app.component.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\app.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\app.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\services\\user.service.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\services\\user.service.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\services\\cart.service.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\services\\cart.service.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\guards\\auth.guard.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\guards\\auth.guard.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\models\\user.model.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\models\\user.model.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\models\\product.model.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\models\\product.model.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\cart\\cart.component.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\cart\\cart.component.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\home\\home.component.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\home\\home.component.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\home\\home.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\home\\home.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\services\\auth.service.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\services\\auth.service.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\app-routing.module.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\app-routing.module.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\app.module.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\app.module.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\services\\user.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\services\\user.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\cart\\cart.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\components\\cart\\cart.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -94,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 185,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -106,275 +74,171 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "home.component.css",
+              "DocumentMoniker": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\home\\home.component.css",
+              "RelativeDocumentMoniker": "src\\app\\components\\home\\home.component.css",
+              "ToolTip": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\home\\home.component.css",
+              "RelativeToolTip": "src\\app\\components\\home\\home.component.css",
+              "ViewState": "AQIAADgAAAAAAAAAAADwv0wAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-11-02T13:14:46.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "home.component.html",
+              "DocumentMoniker": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\home\\home.component.html",
+              "RelativeDocumentMoniker": "src\\app\\components\\home\\home.component.html",
+              "ToolTip": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\home\\home.component.html",
+              "RelativeToolTip": "src\\app\\components\\home\\home.component.html",
+              "ViewState": "AQIAAAUAAAAAAAAAAADwvxYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-11-02T13:13:37.74Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "product.service.ts",
+              "DocumentMoniker": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\services\\product.service.ts",
+              "RelativeDocumentMoniker": "src\\app\\services\\product.service.ts",
+              "ToolTip": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\services\\product.service.ts",
+              "RelativeToolTip": "src\\app\\services\\product.service.ts",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-11-02T13:13:17.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "app.component.ts",
+              "DocumentMoniker": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\app.component.ts",
+              "RelativeDocumentMoniker": "src\\app\\app.component.ts",
+              "ToolTip": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\app.component.ts",
+              "RelativeToolTip": "src\\app\\app.component.ts",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-11-02T13:10:58.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "app.component.spec.ts",
+              "DocumentMoniker": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\app.component.spec.ts",
+              "RelativeDocumentMoniker": "src\\app\\app.component.spec.ts",
+              "ToolTip": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\app.component.spec.ts",
+              "RelativeToolTip": "src\\app\\app.component.spec.ts",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-11-02T13:07:22.98Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "user.service.spec.ts",
+              "DocumentMoniker": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\services\\user.service.spec.ts",
+              "RelativeDocumentMoniker": "src\\app\\services\\user.service.spec.ts",
+              "ToolTip": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\services\\user.service.spec.ts",
+              "RelativeToolTip": "src\\app\\services\\user.service.spec.ts",
+              "ViewState": "AQIAABkAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-11-02T13:07:15.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "cart.service.spec.ts",
+              "DocumentMoniker": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\services\\cart.service.spec.ts",
+              "RelativeDocumentMoniker": "src\\app\\services\\cart.service.spec.ts",
+              "ToolTip": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\services\\cart.service.spec.ts",
+              "RelativeToolTip": "src\\app\\services\\cart.service.spec.ts",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-11-02T13:07:12.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "product.service.spec.ts",
+              "DocumentMoniker": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\services\\product.service.spec.ts",
+              "RelativeDocumentMoniker": "src\\app\\services\\product.service.spec.ts",
+              "ToolTip": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\services\\product.service.spec.ts",
+              "RelativeToolTip": "src\\app\\services\\product.service.spec.ts",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-11-02T13:07:04.255Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "auth.guard.spec.ts",
+              "DocumentMoniker": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\guards\\auth.guard.spec.ts",
+              "RelativeDocumentMoniker": "src\\app\\guards\\auth.guard.spec.ts",
+              "ToolTip": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\guards\\auth.guard.spec.ts",
+              "RelativeToolTip": "src\\app\\guards\\auth.guard.spec.ts",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-11-02T13:06:51.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "user.model.ts",
+              "DocumentMoniker": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\models\\user.model.ts",
+              "RelativeDocumentMoniker": "src\\app\\models\\user.model.ts",
+              "ToolTip": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\models\\user.model.ts",
+              "RelativeToolTip": "src\\app\\models\\user.model.ts",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-11-02T13:06:46.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "product.model.ts",
+              "DocumentMoniker": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\models\\product.model.ts",
+              "RelativeDocumentMoniker": "src\\app\\models\\product.model.ts",
+              "ToolTip": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\models\\product.model.ts",
+              "RelativeToolTip": "src\\app\\models\\product.model.ts",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-11-02T13:06:45.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "cart.component.spec.ts",
+              "DocumentMoniker": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\cart\\cart.component.spec.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\cart\\cart.component.spec.ts",
+              "ToolTip": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\cart\\cart.component.spec.ts",
+              "RelativeToolTip": "src\\app\\components\\cart\\cart.component.spec.ts",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-11-02T13:06:37.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 12,
               "Title": "home.component.spec.ts",
               "DocumentMoniker": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\home\\home.component.spec.ts",
               "RelativeDocumentMoniker": "src\\app\\components\\home\\home.component.spec.ts",
               "ToolTip": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\home\\home.component.spec.ts",
               "RelativeToolTip": "src\\app\\components\\home\\home.component.spec.ts",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAhAAAA",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-11-02T01:49:57.754Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "home.component.css",
-              "DocumentMoniker": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\home\\home.component.css",
-              "RelativeDocumentMoniker": "src\\app\\components\\home\\home.component.css",
-              "ToolTip": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\home\\home.component.css",
-              "RelativeToolTip": "src\\app\\components\\home\\home.component.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-02T01:49:15.891Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "home.component.html",
-              "DocumentMoniker": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\home\\home.component.html",
-              "RelativeDocumentMoniker": "src\\app\\components\\home\\home.component.html",
-              "ToolTip": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\home\\home.component.html",
-              "RelativeToolTip": "src\\app\\components\\home\\home.component.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-11-02T01:47:03.87Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "home.component.ts",
-              "DocumentMoniker": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\home\\home.component.ts",
-              "RelativeDocumentMoniker": "src\\app\\components\\home\\home.component.ts",
-              "ToolTip": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\home\\home.component.ts",
-              "RelativeToolTip": "src\\app\\components\\home\\home.component.ts",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAwCYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-11-02T01:46:03.886Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "navbar.component.ts",
-              "DocumentMoniker": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\navbar\\navbar.component.ts",
-              "RelativeDocumentMoniker": "src\\app\\components\\navbar\\navbar.component.ts",
-              "ToolTip": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\navbar\\navbar.component.ts",
-              "RelativeToolTip": "src\\app\\components\\navbar\\navbar.component.ts",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-11-02T01:35:51.358Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "login.component.ts",
-              "DocumentMoniker": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\login\\login.component.ts",
-              "RelativeDocumentMoniker": "src\\app\\components\\login\\login.component.ts",
-              "ToolTip": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\login\\login.component.ts",
-              "RelativeToolTip": "src\\app\\components\\login\\login.component.ts",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAAwDUAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-11-02T00:41:31.282Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "login.component.spec.ts",
-              "DocumentMoniker": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\login\\login.component.spec.ts",
-              "RelativeDocumentMoniker": "src\\app\\components\\login\\login.component.spec.ts",
-              "ToolTip": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\login\\login.component.spec.ts",
-              "RelativeToolTip": "src\\app\\components\\login\\login.component.spec.ts",
-              "ViewState": "AQIAACcAAAAAAAAAAAAAAFAAAABPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-11-02T00:52:23.05Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "auth.service.ts",
-              "DocumentMoniker": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\services\\auth.service.ts",
-              "RelativeDocumentMoniker": "src\\app\\services\\auth.service.ts",
-              "ToolTip": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\services\\auth.service.ts",
-              "RelativeToolTip": "src\\app\\services\\auth.service.ts",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-11-02T00:45:39.011Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "login.component.css",
-              "DocumentMoniker": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\login\\login.component.css",
-              "RelativeDocumentMoniker": "src\\app\\components\\login\\login.component.css",
-              "ToolTip": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\login\\login.component.css",
-              "RelativeToolTip": "src\\app\\components\\login\\login.component.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-02T00:40:46.342Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "login.component.html",
-              "DocumentMoniker": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\login\\login.component.html",
-              "RelativeDocumentMoniker": "src\\app\\components\\login\\login.component.html",
-              "ToolTip": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\login\\login.component.html",
-              "RelativeToolTip": "src\\app\\components\\login\\login.component.html",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAAAMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-11-02T00:15:34.794Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "navbar.component.html",
-              "DocumentMoniker": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\navbar\\navbar.component.html",
-              "RelativeDocumentMoniker": "src\\app\\components\\navbar\\navbar.component.html",
-              "ToolTip": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\navbar\\navbar.component.html",
-              "RelativeToolTip": "src\\app\\components\\navbar\\navbar.component.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-11-02T00:16:07.485Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "app.component.html",
-              "DocumentMoniker": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\app.component.html",
-              "RelativeDocumentMoniker": "src\\app\\app.component.html",
-              "ToolTip": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\app.component.html",
-              "RelativeToolTip": "src\\app\\app.component.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-11-02T00:17:15.223Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "auth.service.spec.ts",
-              "DocumentMoniker": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\services\\auth.service.spec.ts",
-              "RelativeDocumentMoniker": "src\\app\\services\\auth.service.spec.ts",
-              "ToolTip": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\services\\auth.service.spec.ts",
-              "RelativeToolTip": "src\\app\\services\\auth.service.spec.ts",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAAB0AAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-11-02T00:46:54.999Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "app.component.ts",
-              "DocumentMoniker": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\app.component.ts",
-              "RelativeDocumentMoniker": "src\\app\\app.component.ts",
-              "ToolTip": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\app.component.ts",
-              "RelativeToolTip": "src\\app\\app.component.ts",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-11-02T00:21:13.913Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "app-routing.module.ts",
-              "DocumentMoniker": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\app-routing.module.ts",
-              "RelativeDocumentMoniker": "src\\app\\app-routing.module.ts",
-              "ToolTip": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\app-routing.module.ts",
-              "RelativeToolTip": "src\\app\\app-routing.module.ts",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-11-02T00:36:20.646Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "navbar.component.css",
-              "DocumentMoniker": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\navbar\\navbar.component.css",
-              "RelativeDocumentMoniker": "src\\app\\components\\navbar\\navbar.component.css",
-              "ToolTip": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\navbar\\navbar.component.css",
-              "RelativeToolTip": "src\\app\\components\\navbar\\navbar.component.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-02T00:33:19.608Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "app.module.ts",
-              "DocumentMoniker": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\app.module.ts",
-              "RelativeDocumentMoniker": "src\\app\\app.module.ts",
-              "ToolTip": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\app.module.ts",
-              "RelativeToolTip": "src\\app\\app.module.ts",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAAABIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-11-02T00:25:29.537Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "user.service.ts",
-              "DocumentMoniker": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\services\\user.service.ts",
-              "RelativeDocumentMoniker": "src\\app\\services\\user.service.ts",
-              "ToolTip": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\services\\user.service.ts",
-              "RelativeToolTip": "src\\app\\services\\user.service.ts",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-11-02T00:23:06.387Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "cart.component.html",
-              "DocumentMoniker": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\cart\\cart.component.html",
-              "RelativeDocumentMoniker": "src\\app\\components\\cart\\cart.component.html",
-              "ToolTip": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\app\\components\\cart\\cart.component.html",
-              "RelativeToolTip": "src\\app\\components\\cart\\cart.component.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-11-02T00:20:18.722Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "styles.css",
-              "DocumentMoniker": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\styles.css",
-              "RelativeDocumentMoniker": "src\\styles.css",
-              "ToolTip": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\styles.css",
-              "RelativeToolTip": "src\\styles.css",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAACMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-02T00:16:35.424Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "index.html",
-              "DocumentMoniker": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\index.html",
-              "RelativeDocumentMoniker": "src\\index.html",
-              "ToolTip": "D:\\Humber\\Angular\\Assignment2\\mini-product-store\\src\\index.html",
-              "RelativeToolTip": "src\\index.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-11-02T00:14:37.25Z",
+              "WhenOpened": "2024-11-02T13:06:29.772Z",
               "EditorCaption": ""
             }
           ]

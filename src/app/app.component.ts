@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   showLoginForm = false;
+  title = 'mini-product-store';
 
   toggleLoginForm() {
     this.showLoginForm = !this.showLoginForm;

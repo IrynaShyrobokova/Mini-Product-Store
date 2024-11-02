@@ -4,13 +4,13 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\components",
+    "\\src\\app\\components\\cart",
+    "\\src\\app\\components\\dashboard",
     "\\src\\app\\components\\home",
+    "\\src\\app\\components\\login",
     "\\src\\app\\components\\navbar",
-    "\\src\\app\\models",
-    "\\src\\app\\services",
-    "\\src\\assets",
-    "\\src\\environments"
+    "\\src\\app\\services"
   ],
-  "SelectedNode": "\\src\\app\\components\\home\\home.component.html",
+  "SelectedNode": "\\src\\app\\services\\auth.service.ts",
   "PreviewInSolutionExplorer": false
 }

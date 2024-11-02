@@ -2,11 +2,22 @@
   <h2>Welcome, {{ username ? username : 'Guest' }}!</h2>
 </div>
 
-<div class="products-container" *ngIf="!isLoading">
+<div class="product-container">
   <div *ngFor="let product of products" class="product-card">
-    <h3 class="product-title">{{ product.name }}</h3>
+    <!-- Product Image -->
+    <img [src]="product.image" alt="{{ product.title }}" class="product-image" />
+
+    <!-- Product Title -->
+    <h3 class="product-title">{{ product.title }}</h3>
+
+    <!-- Product Description -->
     <p class="product-description">{{ product.description }}</p>
-    <button class="add-to-cart" (click)="addToCart(product)">Add to Cart</button>
+
+    <!-- Product Price -->
+    <p class="product-price">$ {{ product.price }}</p>
+
+    <!-- Add to Cart Button -->
+    <button class="add-to-cart-button" (click)="addToCart(product)">Add to Cart</button>
   </div>
 </div>
 

@@ -3,10 +3,10 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { tap, map } from 'rxjs/operators';
 
-// Define the LoginResponse interface here
+// Define the LoginResponse interface
 interface LoginResponse {
   success: boolean;
-  user?: string; // Optional property, depending on what your API returns
+  user?: string; // Optional, based on API response
 }
 
 @Injectable({
@@ -21,10 +21,13 @@ export class AuthService {
 
   login(username: string, password: string): Observable<boolean> {
     return this.http.post<LoginResponse>(this.apiUrl, { username, password }).pipe(
-      tap(response => {
+      tap((response: LoginResponse) => {
+        console.log(response);
         if (response.success) {
           this.loggedIn = true;
-          this.currentUser = response.user || username; // Set the current user
+          this.currentUser = response.user || username; 
+        } else {
+          this.loggedIn = false;
         }
       }),
       map(response => response.success)
