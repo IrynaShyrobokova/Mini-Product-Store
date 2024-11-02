@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../../services/user.service';
+import { UsersService } from '../../services/user.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,17 +8,23 @@ import { UserService } from '../../services/user.service';
 })
 export class DashboardComponent implements OnInit {
   users: any[] = [];
-  isLoading = true;
+  errorMessage: string | null = null;
 
-  constructor(private userService: UserService) { }
+  constructor(private usersService: UsersService) { }
 
-  ngOnInit() {
-    this.userService.getAllUsers().subscribe({
+  ngOnInit(): void {
+    this.loadUsers();
+  }
+
+  loadUsers(): void {
+    this.usersService.getAllUsers().subscribe({
       next: (data) => {
         this.users = data;
-        this.isLoading = false;
       },
-      error: (error) => console.error(error),
+      error: (error) => {
+        this.errorMessage = 'Failed to load users';
+        console.error('Error fetching users:', error);
+      }
     });
   }
 }

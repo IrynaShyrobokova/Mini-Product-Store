@@ -1,26 +1,20 @@
-<div class="container mt-4" *ngIf="!isLoading; else loading">
-  <h2>Dashboard</h2>
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Username</th>
-        <th>Phone</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let user of users">
-        <td>{{ user.name.firstname }} {{ user.name.lastname }}</td>
-        <td>{{ user.email }}</td>
-        <td>{{ user.username }}</td>
-        <td>{{ user.phone }}</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<ng-template #loading>
-  <div class="text-center">
-    <div class="spinner-border" role="status"></div>
+<div class="dashboard">
+  <h2>User Dashboard</h2>
+
+  <!-- Display an error message if there’s an error -->
+  <div *ngIf="errorMessage" class="alert alert-danger">
+    {{ errorMessage }}
   </div>
-</ng-template>
+
+  <!-- Display the list of users if available -->
+  <ul *ngIf="users.length > 0" class="list-group">
+    <li *ngFor="let user of users" class="list-group-item">
+      <strong>{{ user.first_name }} {{ user.last_name }}</strong> - {{ user.email }}
+    </li>
+  </ul>
+
+  <!-- Message for when there are no users -->
+  <div *ngIf="users.length === 0 && !errorMessage">
+    <p>No users found.</p>
+  </div>
+</div>

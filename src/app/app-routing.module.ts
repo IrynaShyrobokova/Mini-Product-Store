@@ -1,23 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './components/home/home.component';
-import { AddProductComponent } from './components/add-product/add-product.component';
-import { CartComponent } from './components/cart/cart.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LoginComponent } from './components/login/login.component';
-import { AuthGuard } from './guards/auth.guard';
+import { HomeComponent } from './components/home/home.component';
+import { CartComponent } from './components/cart/cart.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'add-product', component: AddProductComponent, canActivate: [AuthGuard] },
-  { path: 'cart', component: CartComponent },
-  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
+  { path: '', redirectTo: 'login', pathMatch: 'full' }, // Redirect root to login
   { path: 'login', component: LoginComponent },
-  { path: '**', redirectTo: '' },
+  { path: 'home', component: HomeComponent },
+  { path: 'cart', component: CartComponent },
+  { path: '**', redirectTo: 'login' } 
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }

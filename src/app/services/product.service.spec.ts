@@ -29,24 +29,14 @@ describe('ProductService', () => {
   });
 
   it('should retrieve products from the API via GET', () => {
-    service.getProducts().subscribe((products) => {
+    service.getAllProducts().subscribe((products) => {
       expect(products.length).toBe(2);
       expect(products).toEqual(dummyProducts);
     });
 
-    const req = httpMock.expectOne(`${service.baseUrl}/products`);
+    const req = httpMock.expectOne(`${service['apiUrl']}`);
     expect(req.request.method).toBe('GET');
     req.flush(dummyProducts);
-  });
-
-  it('should retrieve a product by ID from the API via GET', () => {
-    service.getProductById(1).subscribe((product) => {
-      expect(product).toEqual(dummyProducts[0]);
-    });
-
-    const req = httpMock.expectOne(`${service.baseUrl}/products/1`);
-    expect(req.request.method).toBe('GET');
-    req.flush(dummyProducts[0]);
   });
 
   it('should add a new product via POST', () => {
@@ -56,30 +46,8 @@ describe('ProductService', () => {
       expect(product).toEqual(newProduct);
     });
 
-    const req = httpMock.expectOne(`${service.baseUrl}/products`);
+    const req = httpMock.expectOne(`${service['apiUrl']}`);
     expect(req.request.method).toBe('POST');
     req.flush(newProduct);
-  });
-
-  it('should update an existing product via PUT', () => {
-    const updatedProduct: Product = { id: 1, name: 'Updated Product 1', price: 150 };
-
-    service.updateProduct(updatedProduct).subscribe((product) => {
-      expect(product).toEqual(updatedProduct);
-    });
-
-    const req = httpMock.expectOne(`${service.baseUrl}/products/1`);
-    expect(req.request.method).toBe('PUT');
-    req.flush(updatedProduct);
-  });
-
-  it('should delete a product via DELETE', () => {
-    service.deleteProduct(1).subscribe((response) => {
-      expect(response).toEqual({});
-    });
-
-    const req = httpMock.expectOne(`${service.baseUrl}/products/1`);
-    expect(req.request.method).toBe('DELETE');
-    req.flush({});
   });
 });

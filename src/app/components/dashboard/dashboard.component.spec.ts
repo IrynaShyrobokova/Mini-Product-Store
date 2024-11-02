@@ -1,35 +1,64 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { of, throwError } from 'rxjs';
 import { DashboardComponent } from './dashboard.component';
-import { RouterTestingModule } from '@angular/router/testing';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { UsersService } from '../../services/user.service';
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;
   let fixture: ComponentFixture<DashboardComponent>;
+  let usersServiceSpy: jasmine.SpyObj<UsersService>;
+
+  const mockUsers = [
+    { id: 1, first_name: 'John', last_name: 'Doe', email: 'john.doe@example.com' },
+    { id: 2, first_name: 'Jane', last_name: 'Smith', email: 'jane.smith@example.com' }
+  ];
 
   beforeEach(async () => {
+    const spy = jasmine.createSpyObj('UsersService', ['getAllUsers']);
+
     await TestBed.configureTestingModule({
       declarations: [DashboardComponent],
-      imports: [
-        RouterTestingModule,     // Provides mock routing services
-        HttpClientTestingModule  // Provides mock HTTP services
+      providers: [
+        { provide: UsersService, useValue: spy }
       ]
-    })
-      .compileComponents();
-  });
+    }).compileComponents();
 
-  beforeEach(() => {
+    usersServiceSpy = TestBed.inject(UsersService) as jasmine.SpyObj<UsersService>;
     fixture = TestBed.createComponent(DashboardComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();  // Detects initial data bindings
   });
 
   it('should create the component', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should render the title in a h1 tag', () => {
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Dashboard Title');
+  it('should load users on initialization', () => {
+    usersServiceSpy.getAllUsers.and.returnValue(of(mockUsers));
+
+    fixture.detectChanges(); // Trigger ngOnInit
+
+    expect(component.users).toEqual(mockUsers);
+    expect(component.errorMessage).toBeNull();
+    expect(usersServiceSpy.getAllUsers).toHaveBeenCalled();
+  });
+
+  it('should display an error message if loading users fails', () => {
+    const errorResponse = new Error('Network error');
+    usersServiceSpy.getAllUsers.and.returnValue(throwError(() => errorResponse));
+
+    fixture.detectChanges(); // Trigger ngOnInit
+
+    expect(component.users).toEqual([]);
+    expect(component.errorMessage).toBe('Failed to load users');
+    expect(usersServiceSpy.getAllUsers).toHaveBeenCalled();
+  });
+
+  it('should not display any users if the users array is empty', () => {
+    usersServiceSpy.getAllUsers.and.returnValue(of([]));
+
+    fixture.detectChanges(); // Trigger ngOnInit
+
+    expect(component.users.length).toBe(0);
+    expect(component.errorMessage).toBeNull();
   });
 });

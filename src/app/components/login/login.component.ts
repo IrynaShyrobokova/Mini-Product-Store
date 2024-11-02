@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
@@ -7,17 +7,31 @@ import { AuthService } from '../../services/auth.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
-  username = '';
-  password = '';
+export class LoginComponent implements OnInit {
+  loginForm!: FormGroup;
 
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(private fb: FormBuilder, private authService: AuthService) { }
 
-  login() {
-    // Implement your own login logic here
-    if (this.username && this.password) {
-      this.authService.login();
-      this.router.navigate(['/']);
+  ngOnInit(): void {
+    this.loginForm = this.fb.group({
+      username: ['', Validators.required],
+      password: ['', [Validators.required, Validators.minLength(6)]]
+    });
+  }
+
+  onLogin(): void {
+    if (this.loginForm.valid) {
+      const { username, password } = this.loginForm.value;
+      this.authService.login(username, password).subscribe({
+        next: (response: any) => {
+          console.log('Login successful:', response);
+          // Handle successful login, e.g., navigate to a dashboard
+        },
+        error: (err: any) => {
+          console.error('Login error:', err);
+          // Handle login error, e.g., show an error message
+        }
+      });
     }
   }
 }
