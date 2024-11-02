@@ -2,6 +2,8 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
+import { catchError } from 'rxjs/operators';
+import { of } from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -48,7 +50,7 @@ export class LoginComponent implements OnInit {
           // Set current user for display in navbar
           this.authService.setCurrentUser(username);
           this.router.navigate(['/home']);
-          this.close.emit(); // Close the login form after successful login
+          this.close.emit(); 
         } else {
           this.loginError = 'Login failed. Please try again.';
         }

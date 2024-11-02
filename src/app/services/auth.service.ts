@@ -1,12 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { tap, map } from 'rxjs/operators';
+import { Observable, BehaviorSubject, of } from 'rxjs';
+import { tap, map, catchError } from 'rxjs/operators';
 
-// Define the LoginResponse interface
 interface LoginResponse {
   success: boolean;
-  user?: string; // Optional, based on API response
+  user?: string;
 }
 
 @Injectable({
@@ -15,22 +14,28 @@ interface LoginResponse {
 export class AuthService {
   private apiUrl = 'https://your-api-url.com/login';
   private loggedIn = false;
-  private currentUser: string | null = null;
+  private currentUserSubject = new BehaviorSubject<string | null>(null);
+  currentUser$ = this.currentUserSubject.asObservable();
 
   constructor(private http: HttpClient) { }
 
   login(username: string, password: string): Observable<boolean> {
     return this.http.post<LoginResponse>(this.apiUrl, { username, password }).pipe(
-      tap((response: LoginResponse) => {
-        console.log(response);
+      tap(response => {
+        console.log('Login response:', response);
         if (response.success) {
           this.loggedIn = true;
-          this.currentUser = response.user || username; 
+          this.setCurrentUser(username);
         } else {
           this.loggedIn = false;
+          this.setCurrentUser(null);
         }
       }),
-      map(response => response.success)
+      map(response => response.success),
+      catchError(error => {
+        console.error('Login error:', error);
+        return of(false);
+      })
     );
   }
 
@@ -38,16 +43,16 @@ export class AuthService {
     return this.loggedIn;
   }
 
-  setCurrentUser(username: string) {
-    this.currentUser = username;
+  setCurrentUser(username: string | null) {
+    this.currentUserSubject.next(username);
   }
 
   getCurrentUser(): string | null {
-    return this.currentUser;
+    return this.currentUserSubject.value;
   }
 
   logout(): void {
     this.loggedIn = false;
-    this.currentUser = null;
+    this.setCurrentUser(null);
   }
 }

@@ -7,11 +7,13 @@
     </ul>
     <div class="ml-auto">
       <button *ngIf="!currentUser" (click)="openLogin()">Login</button>
-      <button *ngIf="currentUser">{{ currentUser }}</button>
+      <div *ngIf="currentUser">
+        <span>{{ currentUser }}</span>
+        <button (click)="logout()">Logout</button>
+      </div>
     </div>
   </div>
 </nav>
 
-<div *ngIf="isLoginModalOpen" class="modal-overlay">
-  <app-login (close)="closeLogin()"></app-login>
-</div>
+<!-- Login Modal -->
+<app-login *ngIf="isLoginModalOpen" (close)="closeLogin()"></app-login>

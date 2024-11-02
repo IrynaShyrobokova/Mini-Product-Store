@@ -8,21 +8,19 @@ import { AuthService } from '../../services/auth.service';
 })
 export class NavbarComponent {
   currentUser: string | null = null;
-  @Output() loginClick = new EventEmitter<void>();
   isLoginModalOpen = false;
 
   constructor(private authService: AuthService) { }
 
   ngOnInit() {
-    this.currentUser = this.authService.getCurrentUser();
+    this.authService.currentUser$.subscribe(user => {
+      this.currentUser = user;
+      if (user) {
+        this.closeLogin(); 
+      }
+    });
   }
 
-  // Optional: Add method to refresh current user if it changes dynamically
-  refreshUser() {
-    this.currentUser = this.authService.getCurrentUser();
-  }
-
-  // Define the openLogin method if it should trigger the login modal
   openLogin() {
     this.isLoginModalOpen = true;
   }
@@ -31,7 +29,8 @@ export class NavbarComponent {
     this.isLoginModalOpen = false;
   }
 
-  onLoginClick() {
-    this.loginClick.emit();
+  logout() {
+    this.authService.logout();
+    this.closeLogin(); 
   }
 }
