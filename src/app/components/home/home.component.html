@@ -14,7 +14,9 @@
     <p class="product-description">{{ product.description }}</p>
 
     <!-- Product Price -->
-    <p class="product-price">$ {{ product.price }}</p>
+    <div class="product-price">
+      {{ product.price | currency: 'CAD':'symbol':'1.2-2' }}
+    </div>
 
     <!-- Add to Cart Button -->
     <button class="add-to-cart-button" (click)="addToCart(product)">Add to Cart</button>
