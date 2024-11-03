@@ -14,6 +14,7 @@ export class AuthService {
   private apiUrl = 'https://reqres.in/api/login';
   private currentUserSubject = new BehaviorSubject<string | null>(null);
   public currentUser$ = this.currentUserSubject.asObservable();
+  private tokenKey = 'authToken';
 
   constructor(private http: HttpClient) { }
 
@@ -25,22 +26,28 @@ export class AuthService {
       map((response: LoginResponse) => {
         if (response.token) {
           this.setCurrentUser(email);
+          localStorage.setItem('authToken', response.token);
+          console.log('Token stored:', localStorage.getItem('authToken')); // Debugging line
           return true;
         } else {
           this.setCurrentUser(null);
+          localStorage.removeItem('authToken');
           return false;
         }
       }),
       catchError(error => {
         console.error('Login error:', error);
         this.setCurrentUser(null);
+        localStorage.removeItem('authToken');
         return of(false);
       })
     );
   }
-
+  
   isLoggedIn(): boolean {
-    return !!localStorage.getItem('token'); 
+    const isLogged = !!localStorage.getItem(this.tokenKey);
+    console.log('AuthService - isLoggedIn:', isLogged); 
+    return isLogged;
   }
 
   getCurrentUser() {
@@ -54,6 +61,7 @@ export class AuthService {
   }
 
   logout(): void {
+    localStorage.removeItem(this.tokenKey);
     this.setCurrentUser(null);
   }
 }

@@ -1,5 +1,5 @@
-// src/app/services/cart.service.ts
 import { Injectable } from '@angular/core';
+import { AuthService } from './auth.service';
 
 @Injectable({
   providedIn: 'root',
@@ -7,18 +7,16 @@ import { Injectable } from '@angular/core';
 export class CartService {
   private cartItems: any[] = [];
 
-  constructor() {
-    // Load cart items from local storage if available (optional)
-    const storedCart = localStorage.getItem('cartItems');
-    if (storedCart) {
-      //this.cartItems = JSON.parse(storedCart);
-    }
-  }
+  constructor(private authService: AuthService) { }
 
   addToCart(product: any) {
+    console.log('Is user logged in?', this.authService.isLoggedIn()); // Debugging line
+    if (!this.authService.isLoggedIn()) {
+      window.alert('Please log in to add items to the cart.');
+      return;
+    }
     this.cartItems.push({ ...product, quantity: 1 });
     window.alert(`${product.title} was added to the cart!`);
-    console.log('Add to Cart in CartService clicked');
     this.updateLocalStorage();
   }
 
