@@ -13,7 +13,7 @@ interface LoginResponse {
 export class AuthService {
   private apiUrl = 'https://reqres.in/api/login';
   private currentUserSubject = new BehaviorSubject<string | null>(null);
-  currentUser$ = this.currentUserSubject.asObservable();
+  public currentUser$ = this.currentUserSubject.asObservable();
 
   constructor(private http: HttpClient) { }
 
@@ -39,7 +39,8 @@ export class AuthService {
     );
   }
 
-  getCurrentUser(): string | null {
+  getCurrentUser() {
+    console.log('getCurrentUser():', this.currentUserSubject.value);
     return this.currentUserSubject.value;
   }
 

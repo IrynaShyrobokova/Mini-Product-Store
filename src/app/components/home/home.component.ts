@@ -20,6 +20,10 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.authService.currentUser$.subscribe(username => {
+      this.username = username;
+      console.log('Home component:', this.username);
+    });
     this.productService.getAllProducts().subscribe({
       next: (data: any[]) => {
         this.products = data;
@@ -30,6 +34,7 @@ export class HomeComponent implements OnInit {
 
     // Get the username if logged in, otherwise it will be null
     this.username = this.authService.getCurrentUser();
+    console.log('Home component:', this.username);
   }
 
   addToCart(product: any) {
