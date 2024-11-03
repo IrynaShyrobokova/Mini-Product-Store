@@ -1,58 +1,54 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, BehaviorSubject, of } from 'rxjs';
-import { tap, map, catchError } from 'rxjs/operators';
+import { map, tap, catchError } from 'rxjs/operators';
 
 interface LoginResponse {
-  success: boolean;
-  user?: string;
+  token?: string; // ReqRes returns a token on successful login
 }
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'https://your-api-url.com/login';
-  private loggedIn = false;
+  private apiUrl = 'https://reqres.in/api/login';
   private currentUserSubject = new BehaviorSubject<string | null>(null);
   currentUser$ = this.currentUserSubject.asObservable();
 
   constructor(private http: HttpClient) { }
 
-  login(username: string, password: string): Observable<boolean> {
-    return this.http.post<LoginResponse>(this.apiUrl, { username, password }).pipe(
+  login(email: string, password: string): Observable<boolean> {
+    return this.http.post<LoginResponse>(this.apiUrl, { email, password }).pipe(
       tap(response => {
         console.log('Login response:', response);
-        if (response.success) {
-          this.loggedIn = true;
-          this.setCurrentUser(username);
+      }),
+      map((response: LoginResponse) => {
+        if (response.token) {
+          this.setCurrentUser(email);
+          return true;
         } else {
-          this.loggedIn = false;
           this.setCurrentUser(null);
+          return false;
         }
       }),
-      map(response => response.success),
       catchError(error => {
         console.error('Login error:', error);
+        this.setCurrentUser(null);
         return of(false);
       })
     );
-  }
-
-  isLoggedIn(): boolean {
-    return this.loggedIn;
-  }
-
-  setCurrentUser(username: string | null) {
-    this.currentUserSubject.next(username);
   }
 
   getCurrentUser(): string | null {
     return this.currentUserSubject.value;
   }
 
+  setCurrentUser(email: string | null) {
+    this.currentUserSubject.next(email);
+    console.log('Current user set to:', email);
+  }
+
   logout(): void {
-    this.loggedIn = false;
     this.setCurrentUser(null);
   }
 }
