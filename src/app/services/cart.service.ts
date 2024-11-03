@@ -1,21 +1,24 @@
+// src/app/services/cart.service.ts
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CartService {
-  cartItems: any[] = [];
+  private cartItems: any[] = [];
 
   constructor() {
-    // Load cart items from local storage if available
+    // Load cart items from local storage if available (optional)
     const storedCart = localStorage.getItem('cartItems');
     if (storedCart) {
-      this.cartItems = JSON.parse(storedCart);
+      //this.cartItems = JSON.parse(storedCart);
     }
   }
 
   addToCart(product: any) {
-    this.cartItems.push(product);
+    this.cartItems.push({ ...product, quantity: 1 });
+    window.alert(`${product.title} was added to the cart!`);
+    console.log('Add to Cart in CartService clicked');
     this.updateLocalStorage();
   }
 

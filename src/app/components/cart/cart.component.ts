@@ -1,3 +1,4 @@
+// src/app/components/cart/cart.component.ts
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../../services/cart.service';
 
@@ -12,7 +13,7 @@ export class CartComponent implements OnInit {
   constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
-    this.cartItems = this.cartService.getCartItems().map(item => ({ ...item, quantity: 1 }));
+    this.cartItems = this.cartService.getCartItems();
   }
 
   removeFromCart(index: number) {
@@ -25,12 +26,11 @@ export class CartComponent implements OnInit {
     this.cartItems = [];
   }
 
-  calculateSubtotal(): string {
-    const subtotal = this.cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
-    return subtotal.toFixed(2);
+  updateCart() {
   }
 
-  updateCart() {
- 
+  calculateSubtotal(): number {
+    const subtotal = this.cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+    return subtotal.toFixed(2);
   }
 }

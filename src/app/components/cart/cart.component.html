@@ -11,30 +11,29 @@
       <h3>{{ item.title }}</h3>
       <p>{{ item.description }}</p>
       <p class="price">Price: CA${{ item.price }}</p>
-
-      <div class="actions">
-        <label for="quantity-{{ i }}">Qty:</label>
-        <input
-          type="number"
-          [(ngModel)]="item.quantity"
-          min="1"
-          id="quantity-{{ i }}"
-          (change)="updateCart()"
-          class="quantity-input"
-        />
-
-        <button (click)="removeFromCart(i)" class="action-btn">Delete</button>
-        <button class="action-btn">Save for later</button>
-        <button class="action-btn">Share</button>
-      </div>
     </div>
 
-    <div class="product-price">
-      <p>CA${{ (item.price * item.quantity).toFixed(2) }}</p>
+    <div class="cart-actions">
+      <div class="quantity">
+        <label for="quantity-{{ i }}">Qty:</label>
+        <input type="number"
+               [(ngModel)]="item.quantity"
+               min="1"
+               id="quantity-{{ i }}"
+               (change)="updateCart()"
+               class="quantity-input" />
+      </div>
+      <button (click)="removeFromCart(i)" class="delete-btn">Delete</button>
+      <p class="item-total">CA${{ (item.price * item.quantity).toFixed(2) }}</p>
     </div>
   </div>
+
+  <hr class="divider" />
 
   <div class="subtotal">
     <p>Subtotal ({{ cartItems.length }} items): <strong>CA${{ calculateSubtotal() }}</strong></p>
+    <button (click)="clearCart()" class="clear-cart-btn">Clear Cart</button>
   </div>
 </div>
+
+

@@ -1,6 +1,6 @@
+// src/app/components/product/product.component.ts
 import { Component, Input } from '@angular/core';
 import { CartService } from '../../services/cart.service';
-import { Product } from '../../models/product.model';
 
 @Component({
   selector: 'app-product',
@@ -8,12 +8,13 @@ import { Product } from '../../models/product.model';
   styleUrls: ['./product.component.css'],
 })
 export class ProductComponent {
-  @Input() product!: Product;
+  @Input() product: any;
+  message: string | null = null;
 
   constructor(private cartService: CartService) { }
 
   addToCart() {
+    console.log('Add to Cart clicked');
     this.cartService.addToCart(this.product);
-    alert(`${this.product.name} added to cart!`);
   }
 }
