@@ -39,6 +39,10 @@ export class AuthService {
     );
   }
 
+  isLoggedIn(): boolean {
+    return !!localStorage.getItem('token'); 
+  }
+
   getCurrentUser() {
     console.log('getCurrentUser():', this.currentUserSubject.value);
     return this.currentUserSubject.value;

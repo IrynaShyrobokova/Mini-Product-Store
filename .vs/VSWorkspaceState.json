@@ -4,13 +4,13 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\components",
-    "\\src\\app\\components\\navbar",
+    "\\src\\app\\components\\home",
     "\\src\\app\\guards",
     "\\src\\app\\models",
     "\\src\\app\\services",
     "\\src\\assets",
     "\\src\\environments"
   ],
-  "SelectedNode": "\\src\\app\\components\\navbar\\navbar.component.ts",
+  "SelectedNode": "\\src\\app\\components\\home\\home.component.ts",
   "PreviewInSolutionExplorer": false
 }
