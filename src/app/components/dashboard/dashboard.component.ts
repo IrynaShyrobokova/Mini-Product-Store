@@ -1,30 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { UsersService } from '../../services/user.service';
+import { AuthService } from '../../services/auth.service';
+import { Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-dashboard',
+  standalone: true,
+  imports: [CommonModule], 
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  styleUrls: ['./dashboard.component.css'],
 })
 export class DashboardComponent implements OnInit {
-  users: any[] = [];
-  errorMessage: string | null = null;
+  users$: Observable<any[]> = of([]); 
+  isLoggedIn$: Observable<string | null>;
 
-  constructor(private usersService: UsersService) { }
+  // Injecting services
+  usersService = inject(UsersService);
+  authService = inject(AuthService);
 
-  ngOnInit(): void {
-    this.loadUsers();
+  constructor() {
+    this.isLoggedIn$ = this.authService.currentUser$;
   }
 
-  loadUsers(): void {
-    this.usersService.getAllUsers().subscribe({
-      next: (data) => {
-        this.users = data;
-      },
-      error: (error) => {
-        this.errorMessage = 'Failed to load users';
-        console.error('Error fetching users:', error);
-      }
-    });
+  ngOnInit() {
+    this.users$ = this.usersService.getAllUsers();
   }
 }

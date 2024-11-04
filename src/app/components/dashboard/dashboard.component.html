@@ -1,20 +1,27 @@
-<div class="dashboard">
-  <h2>User Dashboard</h2>
+<div class="dashboard-container">
+  <!-- Dashboard Title -->
+  <h2 class="dashboard-title">Dashboard</h2>
 
-  <!-- Display an error message if there’s an error -->
-  <div *ngIf="errorMessage" class="alert alert-danger">
-    {{ errorMessage }}
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <label class="form-label visually-hidden">Search Users</label>
+    <div class="search-input-wrapper">
+      <input type="text" class="form-control search-input" placeholder="Search users" />
+      <span class="search-icon">🔍</span>
+    </div>
   </div>
 
-  <!-- Display the list of users if available -->
-  <ul *ngIf="users.length > 0" class="list-group">
-    <li *ngFor="let user of users" class="list-group-item">
-      <strong>{{ user.first_name }} {{ user.last_name }}</strong> - {{ user.email }}
-    </li>
-  </ul>
-
-  <!-- Message for when there are no users -->
-  <div *ngIf="users.length === 0 && !errorMessage">
-    <p>No users found.</p>
+  <!-- User List -->
+  <div *ngIf="isLoggedIn$ | async as currentUser; else notLoggedIn" class="user-grid">
+    <div class="user-card" *ngFor="let user of users$ | async">
+      <img [src]="user.avatar" alt="{{ user.first_name }}" class="user-avatar" />
+      <h5 class="user-name">{{ user.first_name }} {{ user.last_name }}</h5>
+      <p class="user-email">{{ user.email }}</p>
+    </div>
   </div>
+
+  <!-- Message if not logged in -->
+  <ng-template #notLoggedIn>
+    <p>Please log in to view the users.</p>
+  </ng-template>
 </div>
