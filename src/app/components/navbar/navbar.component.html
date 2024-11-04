@@ -4,6 +4,9 @@
     <ul class="navbar-nav mr-auto">
       <li class="nav-item"><a class="nav-link" routerLink="/home">Home</a></li>
       <li class="nav-item"><a class="nav-link" routerLink="/cart">Cart</a></li>
+      <li class="nav-item" *ngIf="authService.isLoggedIn()">
+        <a class="nav-link" routerLink="/dashboard">Dashboard</a>
+      </li>
     </ul>
     <div class="ml-auto">
       <button *ngIf="!currentUser" (click)="openLogin()">Login</button>

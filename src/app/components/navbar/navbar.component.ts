@@ -9,8 +9,11 @@ import { AuthService } from '../../services/auth.service';
 export class NavbarComponent {
   currentUser: string | null = null;
   isLoginModalOpen = false;
+  public authService: AuthService;
 
-  constructor(private authService: AuthService) { }
+  constructor(authService: AuthService) {
+    this.authService = authService;
+  }
 
   ngOnInit() {
     this.authService.currentUser$.subscribe(user => {
