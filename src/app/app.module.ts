@@ -12,6 +12,7 @@ import { CartComponent } from './components/cart/cart.component';
 import { ProductComponent } from './components/product/product.component';
 
 import { FormsModule } from '@angular/forms';
+import { AddProductComponent } from './components/add-product/add-product.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     LoginComponent,
     NavbarComponent,
     CartComponent,
-    ProductComponent
+    ProductComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,
