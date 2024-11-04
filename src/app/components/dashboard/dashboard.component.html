@@ -6,14 +6,17 @@
   <div class="search-bar">
     <label class="form-label visually-hidden">Search Users</label>
     <div class="search-input-wrapper">
-      <input type="text" class="form-control search-input" placeholder="Search users" />
+      <input type="text"
+             class="form-control search-input"
+             placeholder="Search users"
+             (input)="onSearch($event)" />
       <span class="search-icon">🔍</span>
     </div>
   </div>
 
   <!-- User List -->
   <div *ngIf="isLoggedIn$ | async as currentUser; else notLoggedIn" class="user-grid">
-    <div class="user-card" *ngFor="let user of users$ | async">
+    <div class="user-card" *ngFor="let user of filteredUsers$ | async">
       <img [src]="user.avatar" alt="{{ user.first_name }}" class="user-avatar" />
       <h5 class="user-name">{{ user.first_name }} {{ user.last_name }}</h5>
       <p class="user-email">{{ user.email }}</p>
