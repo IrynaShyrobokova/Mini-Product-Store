@@ -5,7 +5,7 @@ import { map, tap, catchError } from 'rxjs/operators';
 import { CartService } from './cart.service';
 
 interface LoginResponse {
-  token?: string; // ReqRes returns a token on successful login
+  token?: string; 
 }
 
 @Injectable({
@@ -28,7 +28,7 @@ export class AuthService {
       map((response: LoginResponse) => {
         if (response.token) {
           this.setCurrentUser(email);
-          localStorage.setItem(this.tokenKey, response.token); // Ensure token is stored
+          localStorage.setItem(this.tokenKey, response.token); 
           return true;
         } else {
           this.setCurrentUser(null);
@@ -63,7 +63,7 @@ export class AuthService {
 
   private getCartService() {
     if (!this.cartService) {
-      this.cartService = this.injector.get(CartService); // Lazy load CartService
+      this.cartService = this.injector.get(CartService); 
     }
     return this.cartService;
   }

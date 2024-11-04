@@ -17,8 +17,7 @@ export class DashboardComponent implements OnInit {
   filteredUsers$!: Observable<any[]>;
   isLoggedIn$: Observable<string | null>;
 
-  private searchTerm = new BehaviorSubject<string>(''); // Holds the search term
-
+  private searchTerm = new BehaviorSubject<string>(''); 
   usersService = inject(UsersService);
   authService = inject(AuthService);
 

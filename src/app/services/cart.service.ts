@@ -10,7 +10,7 @@ export class CartService {
   constructor(private authService: AuthService) { }
 
   addToCart(product: any) {
-    console.log('Is user logged in?', this.authService.isLoggedIn()); // Debugging line
+    console.log('Is user logged in?', this.authService.isLoggedIn()); 
     if (!this.authService.isLoggedIn()) {
       window.alert('Please log in to add items to the cart.');
       return;

@@ -24,6 +24,6 @@ describe('AuthGuard', () => {
     authGuard = TestBed.inject(AuthGuard);
     authService = TestBed.inject(AuthService) as jasmine.SpyObj<AuthService>;
     router = TestBed.inject(Router);
-    spyOn(router, 'navigate');  // Spy on Router's navigate method
+    spyOn(router, 'navigate'); 
   });
 });

@@ -11,7 +11,7 @@ import { of } from 'rxjs';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  @Output() close = new EventEmitter<void>(); // Output event to close the form
+  @Output() close = new EventEmitter<void>(); 
   loginForm: FormGroup;
   loginError: string | null = null;
   showPassword: boolean = false;

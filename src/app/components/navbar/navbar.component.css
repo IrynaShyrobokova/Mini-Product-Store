@@ -1,6 +1,6 @@
 /* Style for the entire navbar */
 .navbar {
-  background-color: #333; /* Darker background for contrast */
+  background-color: #333; 
   padding: 1rem;
   font-family: 'Roboto', sans-serif;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -32,7 +32,7 @@
     color: #fff;
   }
 
-/* Right-aligned links (e.g., login/logout) */
+/* Right-aligned links */
 .navbar-nav.ms-auto .nav-item .nav-link {
   font-weight: 500;
   color: #bbb;
@@ -53,7 +53,7 @@
 }
 
 .navbar button {
-  background-color: #007bff; /* Bootstrap primary color */
+  background-color: #007bff; 
   color: white;
   border: none;
   padding: 5px 10px;
@@ -63,7 +63,7 @@
 }
 
   .navbar button:hover {
-    background-color: #0056b3; /* Darker shade for hover effect */
+    background-color: #0056b3; 
   }
 
 .navbar button {

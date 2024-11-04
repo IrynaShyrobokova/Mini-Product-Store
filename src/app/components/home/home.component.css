@@ -9,7 +9,7 @@
 /* Container for the product cards */
 .product-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust the columns based on screen size */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
   gap: 20px;
   padding: 20px;
 }

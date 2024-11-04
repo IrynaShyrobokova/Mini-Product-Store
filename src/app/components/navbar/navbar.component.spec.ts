@@ -9,7 +9,7 @@ describe('NavbarComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [NavbarComponent],
-      imports: [RouterTestingModule]  // For routing-related dependencies
+      imports: [RouterTestingModule]  
     })
       .compileComponents();
   });
@@ -17,7 +17,7 @@ describe('NavbarComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(NavbarComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();  // Initialize bindings
+    fixture.detectChanges();  
   });
 
   it('should create the component', () => {
@@ -41,9 +41,9 @@ describe('NavbarComponent', () => {
   });
 
   it('should call the logout method when logout button is clicked', () => {
-    spyOn(component, 'logout');  // Spy on the logout method
+    spyOn(component, 'logout');  
     const button = fixture.debugElement.nativeElement.querySelector('button.logout-btn');
-    button.click();  // Simulate button click
-    expect(component.logout).toHaveBeenCalled();  // Check if logout method was called
+    button.click();  
+    expect(component.logout).toHaveBeenCalled();  
   });
 });

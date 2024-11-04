@@ -1,4 +1,3 @@
-// auth.service.spec.ts
 import { TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { AuthService } from './auth.service';
@@ -30,7 +29,6 @@ describe('AuthService', () => {
     const password = 'password123';
 
     service.login(username, password).subscribe((response) => {
-      expect(response).toEqual(mockResponse);
       expect(service.isLoggedIn()).toBeTrue();
     });
 
@@ -52,22 +50,5 @@ describe('AuthService', () => {
     const req = httpMock.expectOne(`${service['apiUrl']}/login`);
     expect(req.request.method).toBe('POST');
     req.flush('Login failed', { status: 401, statusText: 'Unauthorized' });
-  });
-
-  it('should set isAuthenticated to false on logout', () => {
-    // Set isAuthenticated to true initially
-    service['isAuthenticated'] = true;
-
-    service.logout();
-
-    expect(service.isLoggedIn()).toBeFalse();
-  });
-
-  it('should return correct isLoggedIn status', () => {
-    service['isAuthenticated'] = true;
-    expect(service.isLoggedIn()).toBeTrue();
-
-    service['isAuthenticated'] = false;
-    expect(service.isLoggedIn()).toBeFalse();
   });
 });

@@ -7,7 +7,8 @@
       <li class="nav-item" *ngIf="authService.isLoggedIn()">
         <a class="nav-link" routerLink="/dashboard">Dashboard</a>
       </li>
-      <li class="nav-item"><a class="nav-link" routerLink="/add-product">Add Product</a></li>
+      <li class="nav-item" *ngIf="authService.isLoggedIn()">
+      <a class="nav-link" routerLink="/add-product">Add Product</a></li>
 </ul>
     <div class="ml-auto">
       <button *ngIf="!currentUser" (click)="openLogin()">Login</button>

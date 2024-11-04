@@ -30,7 +30,6 @@ export class AddProductComponent implements OnInit {
     this.productService.addProduct(this.product).subscribe(
       response => {
         console.log('Product added:', response);
-        // Optionally reset the form or navigate elsewhere
         this.product = { title: '', price: null, category: '', description: '', image: '' };
       },
       error => {
