@@ -34,7 +34,7 @@
     <p>Subtotal ({{ cartItems.length }} items): <strong>CA${{ calculateSubtotal() }}</strong></p>
     <div class="cart-buttons">
       <button class="clear-cart-button" (click)="clearCart()">Clear Cart</button>
-      <button class="checkout-button">Proceed to Checkout</button>
+      <button class="checkout-button" (click)="proceedToCheckout()">Proceed to Checkout</button>
     </div>
   </div>
 </div>

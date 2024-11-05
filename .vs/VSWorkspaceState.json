@@ -4,13 +4,13 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\components",
-    "\\src\\app\\components\\dashboard",
-    "\\src\\app\\components\\navbar",
+    "\\src\\app\\components\\login",
     "\\src\\app\\components\\product",
     "\\src\\app\\guards",
     "\\src\\app\\models",
-    "\\src\\app\\services"
+    "\\src\\assets",
+    "\\src\\environments"
   ],
-  "SelectedNode": "\\src\\app\\components\\dashboard\\dashboard.component.ts",
+  "SelectedNode": "\\.editorconfig",
   "PreviewInSolutionExplorer": false
 }

@@ -1,0 +1,20 @@
+<div class="summary-container">
+  <button class="close-button" (click)="closeOrderSummary()">×</button>
+  <h2>Order Summary</h2>
+
+  <!-- Loop through cart items -->
+  <div *ngFor="let item of cartItems" class="order-item">
+    <img [src]="item.image" alt="{{ item.title }}" class="item-image" />
+    <div class="item-details">
+      <p class="item-name">{{ item.title }}</p>
+      <p class="item-price">CA${{ item.price }} × {{ item.quantity }}</p>
+    </div>
+  </div>
+
+  <div class="subtotal">
+    <p>Subtotal:</p>
+    <span>CA${{ subtotal | number: '1.2-2' }}</span>
+  </div>
+
+  <button (click)="placeOrder()" class="place-order-button">Place Order</button>
+</div>

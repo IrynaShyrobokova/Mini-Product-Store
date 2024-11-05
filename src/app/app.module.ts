@@ -13,6 +13,9 @@ import { ProductComponent } from './components/product/product.component';
 
 import { FormsModule } from '@angular/forms';
 import { AddProductComponent } from './components/add-product/add-product.component';
+import { ShippingComponent } from './components/checkout-shipping/checkout-shipping.component';
+import { PaymentComponent } from './components/checkout-payment/checkout-payment.component';
+import { SummaryComponent } from './components/checkout-summary/checkout-summary.component';
 
 
 @NgModule({
@@ -23,7 +26,10 @@ import { AddProductComponent } from './components/add-product/add-product.compon
     NavbarComponent,
     CartComponent,
     ProductComponent,
-    AddProductComponent
+    AddProductComponent,
+    ShippingComponent,
+    PaymentComponent,
+    SummaryComponent
   ],
   imports: [
     BrowserModule,

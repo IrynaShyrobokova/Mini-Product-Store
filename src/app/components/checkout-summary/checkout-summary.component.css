@@ -1,0 +1,100 @@
+/* Main container for summary */
+.summary-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Header styling */
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Order item styling */
+.order-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+  .order-item:last-child {
+    border-bottom: none;
+  }
+
+/* Styling for item image */
+.item-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  margin-right: 15px;
+  object-fit: cover;
+}
+
+/* Styling for item details */
+.item-details {
+  flex: 1;
+}
+
+.item-name {
+  font-size: 16px;
+  color: #555;
+}
+
+.item-price {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Subtotal styling */
+.subtotal {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-top: 2px solid #ddd;
+}
+
+/* Button styling */
+.place-order-button {
+  width: 100%;
+  padding: 15px;
+  background-color: #ffd814;
+  color: #111;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  text-align: center;
+}
+
+  .place-order-button:hover {
+    background-color: #f7ca00;
+  }
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}

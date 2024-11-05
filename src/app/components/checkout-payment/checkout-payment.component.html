@@ -1,0 +1,25 @@
+<div class="payment-container">
+  <button class="close-button" (click)="closePaymentForm()">×</button>
+  <h2>Payment Information</h2>
+  <form [formGroup]="paymentForm">
+    <label for="cardNumber">Card Number:</label>
+    <input type="text" id="cardNumber" formControlName="cardNumber" required />
+    <div *ngIf="paymentForm.get('cardNumber')?.invalid && paymentForm.get('cardNumber')?.touched" class="error">
+      Card number is required.
+    </div>
+
+    <label for="expiryDate">Expiry Date:</label>
+    <input type="text" id="expiryDate" formControlName="expiryDate" placeholder="MM/YY" required />
+    <div *ngIf="paymentForm.get('expiryDate')?.invalid && paymentForm.get('expiryDate')?.touched" class="error">
+      Expiry date is required.
+    </div>
+
+    <label for="cvv">CVV:</label>
+    <input type="text" id="cvv" formControlName="cvv" required />
+    <div *ngIf="paymentForm.get('cvv')?.invalid && paymentForm.get('cvv')?.touched" class="error">
+      CVV is required.
+    </div>
+
+    <button type="button" (click)="reviewOrder()" class="review-order-button" [disabled]="paymentForm.invalid">Review Order</button>
+  </form>
+</div>

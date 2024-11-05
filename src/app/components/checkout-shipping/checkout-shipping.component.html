@@ -1,0 +1,31 @@
+<div class="shipping-container">
+  <button class="close-button" (click)="closeShippingForm()">×</button>
+  <h2>Shipping Information</h2>
+  <form [formGroup]="shippingForm">
+    <label for="fullName">Full Name:</label>
+    <input type="text" id="fullName" formControlName="fullName" required />
+    <div *ngIf="shippingForm.get('fullName')?.invalid && shippingForm.get('fullName')?.touched" class="error">
+      Full name is required.
+    </div>
+
+    <label for="address">Address:</label>
+    <input type="text" id="address" formControlName="address" required />
+    <div *ngIf="shippingForm.get('address')?.invalid && shippingForm.get('address')?.touched" class="error">
+      Address is required.
+    </div>
+
+    <label for="city">City:</label>
+    <input type="text" id="city" formControlName="city" required />
+    <div *ngIf="shippingForm.get('city')?.invalid && shippingForm.get('city')?.touched" class="error">
+      City is required.
+    </div>
+
+    <label for="postalCode">Postal Code:</label>
+    <input type="text" id="postalCode" formControlName="postalCode" required />
+    <div *ngIf="shippingForm.get('postalCode')?.invalid && shippingForm.get('postalCode')?.touched" class="error">
+      Postal Code is required.
+    </div>
+
+    <button type="button" (click)="proceedToPayment()" class="place-order-button">Proceed to Payment</button>
+  </form>
+</div>
